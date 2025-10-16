@@ -1,1 +1,1 @@
-# Correspondence table between figure names, data files and scripts creating figures
+# Correspondence table between figure names, data files and scripts to create figures
