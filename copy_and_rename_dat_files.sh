@@ -30,5 +30,7 @@ echo "|Figure Number|Data file|Script|"                                         
 echo "| ---- | ---- | ---- |"                                                                >> readme.md
 for ((i=0; i<${#fig_number_in_paper[@]}; i++))
 do
-	echo "|${fig_number_in_paper[${i}]}|||" >> readme.md
+	if [ -n "${fig_number_in_paper[${i}]}" ]; then
+		echo "|${fig_number_in_paper[${i}]}|||" >> readme.md
+	fi
 done
