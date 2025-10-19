@@ -17,7 +17,9 @@
 |5d|[scalar_order_parameter_active_homogeneous_negative_alpha.dat](./data_files/scalar_order_parameter_active_homogeneous_negative_alpha.dat)|scalar_order_parameter.gp||
 |5e|[director_active_homogeneous_negative_alpha.dat](./data_files/director_active_homogeneous_negative_alpha.dat)|director.gp||
 |5f|-|||
-|6a|-|||
+|6a|a|||
+|6a|b|||
+|6a|c|||
 |6b|-|||
 |7a|-|||
 |7b|-|||

@@ -45,11 +45,15 @@ do
 						fi
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}||" >> readme.md
-					elif [ "${full_data_file_name[${j}]}" == *$'\n'* ]; then
-						# check file existence
-						# copy & rename
-						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}||" >> readme.md
+					elif [[ "${full_data_file_name[${j}]}" == *$'\n'* ]]; then
+						IFS=$'\n' read -r -d '' -a multiple_dat_files <<< "${full_data_file_name[${j}]}"
+						for multiple_dat_file in ${multiple_dat_files[@]}
+						do
+							# check file existence
+							# copy & rename
+							### Output Fig Number, data file name and script name
+							echo "|${fig_number_in_paper[${j}]}|${multiple_dat_file}|${gnuplot_script_name[${j}]}||" >> readme.md
+						done
 					fi
 				fi
 			fi

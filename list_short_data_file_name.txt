@@ -19,7 +19,11 @@ short_data_file_name[16]="short_data_file_name"
 short_data_file_name[17]="scalar_order_parameter_active_homogeneous_negative_alpha.dat"
 short_data_file_name[18]="director_active_homogeneous_negative_alpha.dat"
 short_data_file_name[19]="short_data_file_name"
-short_data_file_name[20]="short_data_file_name"
+short_data_file_name[20]="
+a
+b
+c
+"
 short_data_file_name[21]="short_data_file_name"
 short_data_file_name[22]="short_data_file_name"
 short_data_file_name[23]="short_data_file_name"
