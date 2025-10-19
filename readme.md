@@ -1,7 +1,7 @@
 # Correspondence table between figure names, data files and scripts to create figures
 |Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|How to execute gp script|
 | ---- | ---- | ---- | ---- |
-|3a|short_data_file_name|scalar_order_parameter.gp||
+|3a|scalar_order_parameter_passive_homeotropic.dat|scalar_order_parameter.gp||
 |3b|short_data_file_name|scalar_order_parameter.gp||
 |3c|short_data_file_name|director.gp||
 |3d|short_data_file_name|director.gp||
