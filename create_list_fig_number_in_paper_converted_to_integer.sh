@@ -16,10 +16,11 @@ done
 # 非空要素だけをソート（macOS向け）
 sorted_values=($(
 	printf "%s\n" "${values[@]}" \
-		| sed -E 's/^([0-9]+)([a-zA-Z])$/\1 \2/' \
+		| sed -E 's/^([0-9]+)([a-zA-Z]*)$/\1 \2/' \
 		| sort -k1,1n -k2,2 \
-		| tr -d ' '
+		| awk '{printf "%s%s\n", $1, $2}'
 			))
+echo "${sorted_values[@]}"
 
 # 結果表示
 : > list_fig_number_in_paper_converted_to_integer.txt
