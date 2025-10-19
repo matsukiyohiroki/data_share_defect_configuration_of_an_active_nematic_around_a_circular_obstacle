@@ -38,7 +38,7 @@ do
 						# check file existence & copy & rename
 						if [ -n "${full_data_file_name[${j}]}" ]; then
 							if [ -e ${full_data_file_name[${j}]} ]; then
-								cp ${full_data_file_name[${j}]} ./data_files/${short_data_file_name[${j}]}.dat
+								cp ${full_data_file_name[${j}]} ./data_files/${short_data_file_name[${j}]}
 							else
 								echo "Can't find ${full_data_file_name[${j}]}"
 								exit 1
