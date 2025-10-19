@@ -29,6 +29,7 @@ source ./list_fig_number_in_paper.txt
 source ./list_fig_number_in_paper_converted_to_integer.txt
 source ./list_skipped_fig_in_correspondence_table.txt
 source ./list_figures_made_of_single_or_multiple_data_file.txt
+source ./list_gnuplot_script_name.txt
 #source ./list_data_files.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
@@ -44,15 +45,15 @@ do
 					if [ "${made_of_single_or_multiple_data_file[${j}]}" = "no" ]; then
 						### Copy data file and rename
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "single" ]; then
 						### Copy data file and rename
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "multiple" ]; then
 						### Copy data file and rename
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
 					fi
 				fi
 			fi
