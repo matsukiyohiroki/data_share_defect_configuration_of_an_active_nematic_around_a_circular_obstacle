@@ -24,12 +24,18 @@
 ###
 ###
 ### Source configuration files
-source ../code/list_short_name_of_fig.txt
-source ./list_fig_number_in_paper.txt
-source ./list_fig_number_in_paper_converted_to_integer.txt
-source ./list_skipped_fig_in_correspondence_table.txt
-source ./list_figures_made_of_single_or_multiple_data_file.txt
-source ./list_gnuplot_script_name.txt
+sourced_file="../code/list_short_name_of_fig.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
+sourced_file="./list_fig_number_in_paper.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
+sourced_file="./list_fig_number_in_paper_converted_to_integer.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
+sourced_file="./list_skipped_fig_in_correspondence_table.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
+sourced_file="./list_figures_made_of_single_or_multiple_data_file.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
+sourced_file="./list_gnuplot_script_name.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
 #source ./list_data_files.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
@@ -44,14 +50,17 @@ do
 				if [ -z "${skipped_fig_in_correspondence_table[${j}]}" ]; then
 					if [ "${made_of_single_or_multiple_data_file[${j}]}" = "no" ]; then
 						### Copy data file and rename
+						# chech file existence
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "single" ]; then
 						### Copy data file and rename
+						# chech file existence
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "multiple" ]; then
 						### Copy data file and rename
+						# chech file existence
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
 					fi
