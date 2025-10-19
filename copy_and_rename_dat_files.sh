@@ -36,6 +36,8 @@ sourced_file="./list_figures_made_of_single_or_multiple_data_file.txt"
 if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
 sourced_file="./list_gnuplot_script_name.txt"
 if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
+sourced_file="./list_short_data_file_name.txt"
+if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
 #source ./list_data_files.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
@@ -52,17 +54,17 @@ do
 						### Copy data file and rename
 						# chech file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "single" ]; then
 						### Copy data file and rename
 						# chech file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "multiple" ]; then
 						### Copy data file and rename
 						# chech file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|${gnuplot_script_name[${j}]}|" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}|" >> readme.md
 					fi
 				fi
 			fi
