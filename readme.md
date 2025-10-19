@@ -2,20 +2,20 @@
 |Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|How to execute gp script|
 | ---- | ---- | ---- | ---- |
 |3a|scalar_order_parameter_passive_homeotropic.dat|scalar_order_parameter.gp||
-|3b|short_data_file_name|scalar_order_parameter.gp||
-|3c|short_data_file_name|director.gp||
-|3d|short_data_file_name|director.gp||
-|4a|short_data_file_name|scalar_order_parameter.gp||
-|4b|short_data_file_name|director.gp||
+|3b|scalar_order_parameter_passive_homogeneous|scalar_order_parameter.gp||
+|3c|director_passive_homeotropic|director.gp||
+|3d|director_passive_homogeneous|director.gp||
+|4a|scalar_order_parameter_active_homeotropic_positive_alpha|scalar_order_parameter.gp||
+|4b|director_active_homeotropic_positive_alpha|director.gp||
 |4c|short_data_file_name|||
-|4d|short_data_file_name|scalar_order_parameter.gp||
-|4e|short_data_file_name|director.gp||
+|4d|scalar_order_parameter_active_homeotropic_negative_alpha|scalar_order_parameter.gp||
+|4e|director_active_homeotropic_negative_alpha|director.gp||
 |4f|short_data_file_name|||
-|5a|short_data_file_name|scalar_order_parameter.gp||
-|5b|short_data_file_name|director.gp||
+|5a|scalar_order_parameter_active_homogeneous_positive_alpha|scalar_order_parameter.gp||
+|5b|director_active_homogeneous_positive_alpha|director.gp||
 |5c|short_data_file_name|||
-|5d|short_data_file_name|scalar_order_parameter.gp||
-|5e|short_data_file_name|director.gp||
+|5d|scalar_order_parameter_active_homogeneous_negative_alpha|scalar_order_parameter.gp||
+|5e|director_active_homogeneous_negative_alpha|director.gp||
 |5f|short_data_file_name|||
 |6a|short_data_file_name|||
 |6b|short_data_file_name|||
