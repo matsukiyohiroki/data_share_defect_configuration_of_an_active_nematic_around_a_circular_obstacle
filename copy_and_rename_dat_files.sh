@@ -39,7 +39,7 @@ do
 				if [ ${fig_number_in_paper_converted_to_integer[${j}]} -eq ${i} ]; then
 					### Copy data file and rename
 					### Output Fig Number, data file name and script name
-					echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}|script name, here|" >> readme.md
+					echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
 				fi
 			fi
 		done
