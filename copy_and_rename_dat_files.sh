@@ -26,20 +26,22 @@
 source ../code/list_short_name_of_fig.txt
 source ./list_fig_number_in_paper.txt
 source ./list_fig_number_in_paper_converted_to_integer.txt
+source ./list_skipped_fig_in_correspondence_table.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
 echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|" >> readme.md
 echo "| ---- | ---- | ---- |" >> readme.md
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
 do
-	echo "$i"
 	for ((j=0; j<${#fig_number_in_paper_converted_to_integer[@]}; j++))
 	do
 		if [ -n "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
 			if [ "${i}" = "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
 				### Copy data file and rename
 				### Output Fig Number, data file name and script name
-				echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
+				if [ -z "${skipped_fig_in_correspondence_table[${j}]}" ]; then
+					echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
+				fi
 			fi
 		fi
 	done
