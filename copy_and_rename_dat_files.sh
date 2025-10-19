@@ -35,20 +35,19 @@ do
 						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}||" >> readme.md
 					elif [[ "${full_data_file_name[${j}]}" != *$'\n'* ]]; then
 						### Copy data file and rename
-						# check file existence & copy & rename
-						if [ -n "${full_data_file_name[${j}]}" ]; then
-							if [ -e ${full_data_file_name[${j}]} ]; then
-								cp ${full_data_file_name[${j}]} ./data_files/${short_data_file_name[${j}]}
-							else
-								echo "Can't find ${full_data_file_name[${j}]}"
-								exit 1
-							fi
+						# check file existence
+						if [ -e ${full_data_file_name[${j}]} ]; then
+							# copy & rename
+							cp ${full_data_file_name[${j}]} ./data_files/${short_data_file_name[${j}]}
+						else
+							echo "Can't find ${full_data_file_name[${j}]}"
+							exit 1
 						fi
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}||" >> readme.md
 					elif [ "${full_data_file_name[${j}]}" == *$'\n'* ]; then
-						### Copy data file and rename
 						# check file existence
+						# copy & rename
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}||" >> readme.md
 					fi
