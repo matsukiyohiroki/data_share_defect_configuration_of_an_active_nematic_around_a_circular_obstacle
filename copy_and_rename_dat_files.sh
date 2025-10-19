@@ -28,6 +28,7 @@ source ../code/list_short_name_of_fig.txt
 source ./list_fig_number_in_paper.txt
 source ./list_fig_number_in_paper_converted_to_integer.txt
 source ./list_skipped_fig_in_correspondence_table.txt
+source ./list_figures_made_of_single_or_multiple_data_file.txt
 #source ./list_data_files.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
