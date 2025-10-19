@@ -24,6 +24,7 @@
 ### Create readme.md
 ###
 source ./list_fig_number_in_paper.txt
+source ./list_fig_number_in_paper_converted_to_integer.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
 echo "|Figure Number|Data file|Script|"                                                      >> readme.md
@@ -31,6 +32,13 @@ echo "| ---- | ---- | ---- |"                                                   
 for ((i=0; i<${#fig_number_in_paper[@]}; i++))
 do
 	if [ -n "${fig_number_in_paper[${i}]}" ]; then
-		echo "|${fig_number_in_paper[${i}]}|||" >> readme.md
+		for ((j=0; j<${#fig_number_in_paper_converted_to_integer[@]}; j++))
+		do
+			if [ -n "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
+				if [ ${fig_number_in_paper_converted_to_integer[${j}]} -eq ${i} ]; then
+					echo "|${fig_number_in_paper[${j}]}|||" >> readme.md
+				fi
+			fi
+		done
 	fi
 done
