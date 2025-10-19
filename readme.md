@@ -1,5 +1,5 @@
 # Correspondence table between figure names, data files and scripts to create figures
-|Figure Number|Data file (in data_files directory)|Script (in scripts directory)|
+|Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|
 | ---- | ---- | ---- |
 |1a|setup_homeotropic|script name, here|
 |1b|setup_homogeneous|script name, here|

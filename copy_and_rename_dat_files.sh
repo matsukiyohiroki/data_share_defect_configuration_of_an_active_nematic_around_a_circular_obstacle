@@ -28,7 +28,7 @@ source ./list_fig_number_in_paper.txt
 source ./list_fig_number_in_paper_converted_to_integer.txt
 : > readme.md
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
-echo "|Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|"                                                      >> readme.md
+echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|"                                                      >> readme.md
 echo "| ---- | ---- | ---- |"                                                                >> readme.md
 for ((i=0; i<${#fig_number_in_paper[@]}; i++))
 do
