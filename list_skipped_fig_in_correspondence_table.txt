@@ -1,4 +1,7 @@
 ### list of skipped figures in the correspondence table
+# githubの図とデータの対応表に入れる必要のないものは，このリストで，例えばskipと入力すること．
+# (別にskipじゃなくても空文字以外ならスキップされるようにはなっている)
+# スキップしないもの（対応表に入れるもの）は，なにも入力せず(スペースも入れてはいけない)，空文字にしておくこと．
 skipped_fig_in_correspondence_table[0]="skip"
 skipped_fig_in_correspondence_table[1]="skip"
 skipped_fig_in_correspondence_table[2]="skip"

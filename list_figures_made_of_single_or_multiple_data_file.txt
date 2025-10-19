@@ -1,0 +1,34 @@
+### list of skipped figures in the correspondence table
+# 各図が，
+# 数値計算データから作成された図ではないか，(no)
+# 単一のデータファイルから作成されているか，(single)
+# 複数のデータファイルから作成されているか，(multiple)
+# のリスト．
+made_of_single_or_multiple_data_file[0]="no"
+made_of_single_or_multiple_data_file[1]="no"
+made_of_single_or_multiple_data_file[2]="no"
+made_of_single_or_multiple_data_file[3]="no"
+made_of_single_or_multiple_data_file[4]="single"
+made_of_single_or_multiple_data_file[5]="single"
+made_of_single_or_multiple_data_file[6]="single"
+made_of_single_or_multiple_data_file[7]="single"
+made_of_single_or_multiple_data_file[8]="single"
+made_of_single_or_multiple_data_file[9]="single"
+made_of_single_or_multiple_data_file[10]="multiple"
+made_of_single_or_multiple_data_file[11]="single"
+made_of_single_or_multiple_data_file[12]="single"
+made_of_single_or_multiple_data_file[13]="multiple"
+made_of_single_or_multiple_data_file[14]="single"
+made_of_single_or_multiple_data_file[15]="single"
+made_of_single_or_multiple_data_file[16]="multiple"
+made_of_single_or_multiple_data_file[17]="single"
+made_of_single_or_multiple_data_file[18]="single"
+made_of_single_or_multiple_data_file[19]="multiple"
+made_of_single_or_multiple_data_file[20]="multiple"
+made_of_single_or_multiple_data_file[21]="multiple"
+made_of_single_or_multiple_data_file[22]="multiple"
+made_of_single_or_multiple_data_file[23]="multiple"
+made_of_single_or_multiple_data_file[24]="multiple"
+made_of_single_or_multiple_data_file[25]="no"
+made_of_single_or_multiple_data_file[26]="no"
+made_of_single_or_multiple_data_file[27]="no"
