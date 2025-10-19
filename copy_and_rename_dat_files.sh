@@ -21,8 +21,9 @@
 ###   mkdir -p data_files
 ###   cp ${path_to_datafile_scalar_order_parameter_passive_homeotropic} ./data_files/
 ###
-### Create readme.md
 ###
+###
+source ../code/list_short_name_of_fig.txt
 source ./list_fig_number_in_paper.txt
 source ./list_fig_number_in_paper_converted_to_integer.txt
 : > readme.md
@@ -36,7 +37,9 @@ do
 		do
 			if [ -n "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
 				if [ ${fig_number_in_paper_converted_to_integer[${j}]} -eq ${i} ]; then
-					echo "|${fig_number_in_paper[${j}]}|||" >> readme.md
+					### Copy data file and rename
+					### Output Fig Number, data file name and script name
+					echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}|script name, here|" >> readme.md
 				fi
 			fi
 		done
