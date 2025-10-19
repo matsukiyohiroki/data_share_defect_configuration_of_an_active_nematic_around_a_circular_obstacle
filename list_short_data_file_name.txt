@@ -1,8 +1,8 @@
 ### list of short data file names
-short_data_file_name[0]="setup_homeotropic"
-short_data_file_name[1]="setup_homogeneous"
-short_data_file_name[2]="method_of_image_charge_homeotropic"
-short_data_file_name[3]="method_of_image_charge_homogeneous"
+short_data_file_name[0]=""
+short_data_file_name[1]=""
+short_data_file_name[2]=""
+short_data_file_name[3]=""
 short_data_file_name[4]="scalar_order_parameter_passive_homeotropic.dat"
 short_data_file_name[5]="director_passive_homeotropic.dat"
 short_data_file_name[6]="scalar_order_parameter_passive_homogeneous.dat"

@@ -28,12 +28,12 @@ do
 		if [ -n "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
 			if [ "${i}" = "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
 				if [ -z "${skipped_fig_in_correspondence_table[${j}]}" ]; then
-					if [ "${made_of_single_or_multiple_data_file[${j}]}" = "no" ]; then
+					if [[ -z "${full_data_file_name[${j}]}" ]]; then
 						### Copy data file and rename
 						# check file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}||" >> readme.md
-					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "single" ]; then
+						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}||" >> readme.md
+					elif [[ "${full_data_file_name[${j}]}" != *$'\n'* ]]; then
 						### Copy data file and rename
 						# check file existence & copy & rename
 						if [ -n "${full_data_file_name[${j}]}" ]; then
@@ -46,7 +46,7 @@ do
 						fi
 						### Output Fig Number, data file name and script name
 						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}||" >> readme.md
-					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "multiple" ]; then
+					elif [ "${full_data_file_name[${j}]}" == *$'\n'* ]; then
 						### Copy data file and rename
 						# check file existence
 						### Output Fig Number, data file name and script name
