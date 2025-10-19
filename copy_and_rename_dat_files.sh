@@ -32,13 +32,14 @@ echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"script
 echo "| ---- | ---- | ---- |" >> readme.md
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
 do
+	echo "$i"
 	for ((j=0; j<${#fig_number_in_paper_converted_to_integer[@]}; j++))
 	do
 		if [ -n "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
-			if [ ${i} = ${fig_number_in_paper_converted_to_integer[${j}]} ]; then
+			if [ "${i}" = "${fig_number_in_paper_converted_to_integer[${j}]}" ]; then
 				### Copy data file and rename
 				### Output Fig Number, data file name and script name
-				echo "|${fig_number_in_paper[${i}]}|${short_name_of_fig[${i}]}.dat|(script name).gp|" >> readme.md
+				echo "|${fig_number_in_paper[${j}]}|${short_name_of_fig[${j}]}.dat|(script name).gp|" >> readme.md
 			fi
 		fi
 	done
