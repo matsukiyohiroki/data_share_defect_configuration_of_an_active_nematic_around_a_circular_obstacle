@@ -45,7 +45,7 @@ do
 							fi
 						fi
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|${short_data_file_name[${j}]}|${gnuplot_script_name[${j}]}||" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}||" >> readme.md
 					elif [ "${made_of_single_or_multiple_data_file[${j}]}" = "multiple" ]; then
 						### Copy data file and rename
 						# check file existence
