@@ -54,9 +54,9 @@ do
 							# copy & rename
 							### Output Fig Number, data file name and script name
 							if (( k == ${#multiple_dat_files[@]} -1 )); then
-								echo -n "${multiple_dat_files[${k}]}" >> readme.md
+								echo -n "[${multiple_dat_files[${k}]}](./data_files/${multiple_dat_files[${k}]})" >> readme.md
 							else
-								echo -n "${multiple_dat_files[${k}]}<br>" >> readme.md
+								echo -n "[${multiple_dat_files[${k}]}](./data_files/${multiple_dat_files[${k}]})<br>" >> readme.md
 							fi
 						done
 						echo "|${gnuplot_script_name[${j}]}||" >> readme.md
