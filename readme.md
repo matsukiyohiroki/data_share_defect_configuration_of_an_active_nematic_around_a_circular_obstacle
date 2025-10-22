@@ -2,7 +2,7 @@
 Notes
 1. Gnuplot must be installed to execute the scripts.
 
-1. Execute [execute_gp_script.sh](../scripts/execute_gp_script.sh) in the "scripts" directory as ``./execute_gp_script.sh [gnuplot script]``. The gnuplot scripts are listed in the third column of the table.<br>
+1. Execute [execute_gp_script.sh](./scripts/execute_gp_script.sh) in the "scripts" directory as ``./execute_gp_script.sh [gnuplot script]``. The gnuplot scripts are listed in the third column of the table.<br>
 e.g., ``./execute_gp_script.sh scalar_order_parameter_passive_homeotropic.gp``
 1. The created pdf file will be stored in ``scripts/../output_pdf_files``.
 1. The figures in the paper were created on Linux (Ubuntu). We have confirmed that the scripts also work on Mac.
