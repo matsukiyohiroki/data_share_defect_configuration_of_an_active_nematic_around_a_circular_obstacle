@@ -23,7 +23,7 @@ echo "# Correspondence table between figure names, data files and scripts to cre
 # Notes on how to use scripts
 echo "Notes" >> readme.md
 echo -e "- Please execute scripts as \`\`./script.sh output.pdf\`\`" >> readme.md
-echo -e "- The figures in the paper were created on Linux (Ubuntu)." >> readme.md
+echo -e "- The figures in the paper were created on Linux (Ubuntu).\n" >> readme.md
 # Correspondence table
 echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|" >> readme.md
 echo "| ---- | ---- | ---- |" >> readme.md

@@ -2,6 +2,7 @@
 Notes
 - Please execute scripts as ``./script.sh output.pdf``
 - The figures in the paper were created on Linux (Ubuntu).
+
 |Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|
 | ---- | ---- | ---- |
 |3a|[scalar_order_parameter_passive_homeotropic.dat](./data_files/scalar_order_parameter_passive_homeotropic.dat)|scalar_order_parameter.gp|
