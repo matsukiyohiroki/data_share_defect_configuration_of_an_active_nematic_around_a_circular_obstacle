@@ -23,4 +23,4 @@
 |7b|[alpha_vs_r_d_simulation_homogeneous_lambda_1.5.txt](./data_files/alpha_vs_r_d_simulation_homogeneous_lambda_1.5.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_0.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_0.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_1.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_1.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_2.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_2.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_3.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_3.txt)|stat_r_d_vs_alpha.gp|
 
 Notes
-- Please execute scripts as ./script.sh output.pdf
+- Please execute scripts as ``./script.sh output.pdf``
