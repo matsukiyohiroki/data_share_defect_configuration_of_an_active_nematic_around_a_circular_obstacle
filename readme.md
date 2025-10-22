@@ -1,6 +1,6 @@
 # Correspondence table between figure names, data files and scripts to create figures
 Notes
-- Please execute [execute_gp_script.sh](../scripts/execute_gp_script.sh) in the "scripts" directory as<br>``./execute_gp_script.sh [gnuplot script (listed in the third column of the table)]``.
+- Please execute [execute_gp_script.sh](../scripts/execute_gp_script.sh) in the "scripts" directory as ``./execute_gp_script.sh [gnuplot script]``. The gnuplot scripts are listed in the third column of the table
 - The created pdf file will be stored in ``scripts/../output_pdf_files``.
 - The figures in the paper were created on Linux (Ubuntu).
 
