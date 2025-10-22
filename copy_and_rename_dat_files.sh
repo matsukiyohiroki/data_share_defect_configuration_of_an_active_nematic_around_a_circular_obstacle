@@ -57,12 +57,12 @@ do
 					elif [[ "${short_data_file_name[${j}]}" == *$'\n'* ]]; then
 						IFS=$'\n' read -r -d '' -a multiple_dat_files_short_name <<< "${short_data_file_name[${j}]}"
 						IFS=$'\n' read -r -d '' -a multiple_dat_files_full_name  <<< "${full_data_file_name[${j}]}"
+						### Output Fig Number
 						echo -n "|${fig_number_in_paper[${j}]}|" >> ${README_MD_FILE}
 						for ((k=0; k<${#multiple_dat_files_short_name[@]}; k++))
 						do
 							# check file existence
 							# copy & rename
-							### Output Fig Number, data file name and script name
 							if [ -e ${multiple_dat_files_full_name[${k}]} ]; then
 								# copy & rename
 								cp ${multiple_dat_files_full_name[${k}]} ./${DIR_DATA_FILES}/${multiple_dat_files_short_name[${k}]}
@@ -70,12 +70,14 @@ do
 								echo "Can't find ${multiple_dat_files_full_name[${k}]}"
 								exit 1
 							fi
+							### Output data file name
 							if (( k == ${#multiple_dat_files[@]} -1 )); then
 								echo -n "[${multiple_dat_files_short_name[${k}]}](./${DIR_DATA_FILES}/${multiple_dat_files_short_name[${k}]})" >> ${README_MD_FILE}
 							else
 								echo -n "[${multiple_dat_files_short_name[${k}]}](./${DIR_DATA_FILES}/${multiple_dat_files_short_name[${k}]})<br>" >> ${README_MD_FILE}
 							fi
 						done
+						### Output script name
 						echo "|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
 					fi
 				fi
