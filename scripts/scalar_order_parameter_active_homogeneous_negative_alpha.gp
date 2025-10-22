@@ -1,6 +1,6 @@
 #################################### Settings for terminal and output.
 set terminal pdfcairo enhanced size 5in, 5in;
-set output "../output_pdf_files/scalar_order_parameter_passive_homogeneous.pdf";
+set output "../output_pdf_files/scalar_order_parameter_active_homogeneous_negative_alpha.pdf";
 #################################### Parameters for visualization
 R_0=100.0;
 linewidth_defects=0.5;
@@ -33,7 +33,7 @@ set ylabel "y" font "Arial,20";
 set label 1 right at first 1.01*xrange_l,  r_d_over_l "+(7/3)^{1/4}R_{0}" font "Arial,20";
 set label 2 right at first 1.01*xrange_l, -r_d_over_l "-(7/3)^{1/4}R_{0}" font "Arial,20";
 #################################### Plot
-datfile = "../data_files/scalar_order_parameter_passive_homogeneous.dat";
+datfile = "../data_files/scalar_order_parameter_active_homogeneous_negative_alpha.dat";
 splot datfile using ($1*cos($2)):($1*sin($2)):($3) with pm3d, \
 u,r_d_over_l,100 lc black lw linewidth_defects,\
 u,-r_d_over_l,100 lc black lw linewidth_defects;

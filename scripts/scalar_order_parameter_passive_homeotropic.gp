@@ -1,4 +1,3 @@
-#scalar_order_parameter_passive_homeotropic.gp
 #################################### Settings for terminal and output.
 set terminal pdfcairo enhanced size 5in, 5in;
 set output "../output_pdf_files/scalar_order_parameter_passive_homeotropic.pdf";
