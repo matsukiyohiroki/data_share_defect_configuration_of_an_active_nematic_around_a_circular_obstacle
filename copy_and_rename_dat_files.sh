@@ -20,6 +20,11 @@ done
 rm -f ./data_files/*
 # title of readme
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
+# Notes on how to use scripts
+echo "Notes" >> readme.md
+echo -e "- Please execute scripts as \`\`./script.sh output.pdf\`\`" >> readme.md
+echo -e "- The figures in the paper were created on Linux (Ubuntu)." >> readme.md
+# Correspondence table
 echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|" >> readme.md
 echo "| ---- | ---- | ---- |" >> readme.md
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
@@ -68,7 +73,3 @@ do
 	done
 done
 echo "" >> readme.md
-# Notes on how to use scripts
-echo "Notes" >> readme.md
-echo -e "- Please execute scripts as \`\`./script.sh output.pdf\`\`" >> readme.md
-echo -e "- The figures in the paper were created on Linux (Ubuntu)." >> readme.md

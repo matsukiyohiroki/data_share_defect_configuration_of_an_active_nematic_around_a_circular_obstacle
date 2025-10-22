@@ -1,4 +1,7 @@
 # Correspondence table between figure names, data files and scripts to create figures
+Notes
+- Please execute scripts as ``./script.sh output.pdf``
+- The figures in the paper were created on Linux (Ubuntu).
 |Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|
 | ---- | ---- | ---- |
 |3a|[scalar_order_parameter_passive_homeotropic.dat](./data_files/scalar_order_parameter_passive_homeotropic.dat)|scalar_order_parameter.gp|
@@ -22,6 +25,3 @@
 |7a|[alpha_vs_r_d_simulation_homeotropic_lambda_1.5.txt](./data_files/alpha_vs_r_d_simulation_homeotropic_lambda_1.5.txt)<br>[r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_0.txt](./data_files/r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_0.txt)<br>[r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_1.txt](./data_files/r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_1.txt)<br>[r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_2.txt](./data_files/r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_2.txt)<br>[r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_3.txt](./data_files/r_d_by_bisection_method_homeotropic_lambda_1.5_nmax_3.txt)|stat_r_d_vs_alpha.gp|
 |7b|[alpha_vs_r_d_simulation_homogeneous_lambda_1.5.txt](./data_files/alpha_vs_r_d_simulation_homogeneous_lambda_1.5.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_0.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_0.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_1.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_1.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_2.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_2.txt)<br>[r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_3.txt](./data_files/r_d_by_bisection_method_homogeneous_lambda_1.5_nmax_3.txt)|stat_r_d_vs_alpha.gp|
 
-Notes
-- Please execute scripts as ``./script.sh output.pdf``
-- The figures in the paper were created on Linux (Ubuntu).
