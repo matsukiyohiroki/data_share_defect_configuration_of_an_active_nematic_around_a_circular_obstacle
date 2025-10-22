@@ -70,4 +70,4 @@ done
 echo "" >> readme.md
 # Notes on how to use scripts
 echo "Notes" >> readme.md
-echo "- Please execute scripts as follows: ./script.sh output.pdf" >> readme.md
+echo "- Please execute scripts as ``./script.sh output.pdf``" >> readme.md
