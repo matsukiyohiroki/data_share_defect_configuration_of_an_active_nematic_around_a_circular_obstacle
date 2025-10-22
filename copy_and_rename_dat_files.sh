@@ -28,7 +28,7 @@ rm -f ./${DIR_DATA_FILES}/*
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> ${README_MD_FILE}
 # Notes on how to use scripts
 echo "Notes" >> ${README_MD_FILE}
-echo -e "- Please execute [execute_gp_script.sh](../${DIR_SCRIPTS}/execute_gp_script.sh) in the \"${DIR_SCRIPTS}\" directory as \`\`./execute_gp_script.sh [gnuplot script]\`\`. The gnuplot scripts are listed in the third column of the table" >> ${README_MD_FILE}
+echo -e "- Please execute [execute_gp_script.sh](../${DIR_SCRIPTS}/execute_gp_script.sh) in the \"${DIR_SCRIPTS}\" directory as \`\`./execute_gp_script.sh [gnuplot script]\`\`. The gnuplot scripts are listed in the third column of the table." >> ${README_MD_FILE}
 echo -e "- The created pdf file will be stored in \`\`${DIR_SCRIPTS}/../${DIR_OUTPUT_PDF_FILES}\`\`." >> ${README_MD_FILE}
 echo -e "- The figures in the paper were created on Linux (Ubuntu).\n"                 >> ${README_MD_FILE}
 # Correspondence table
