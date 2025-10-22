@@ -1,10 +1,10 @@
 # Correspondence table between figure names, data files and scripts to create figures
 Notes
-- Please execute scripts as ``./execute_gp_script.sh [gnuplot script]``.
+- Please execute scripts as ``./[execute_gp_script.sh](../scripts/execute_gp_script.sh) [gnuplot script]``.
 - The created pdf file will be stored in ``../output_pdf_files``.
 - The figures in the paper were created on Linux (Ubuntu).
 
-|Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|Output pdf file (will be appear in "output_pdf_files" directory)
+|Figure Number|Data file (in "data_files" directory)|Script (in "scripts" directory)|Output pdf file (will be stored in "output_pdf_files" directory)
 | ---- | ---- | ---- | ---- |
 |3a|[scalar_order_parameter_passive_homeotropic.dat](./data_files/scalar_order_parameter_passive_homeotropic.dat)|scalar_order_parameter.gp||
 |3b|[scalar_order_parameter_passive_homogeneous.dat](./data_files/scalar_order_parameter_passive_homogeneous.dat)|scalar_order_parameter.gp||

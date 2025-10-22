@@ -26,11 +26,11 @@ rm -f ./${DIR_DATA_FILES}/*
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> ${README_MD_FILE}
 # Notes on how to use scripts
 echo "Notes" >> ${README_MD_FILE}
-echo -e "- Please execute scripts as \`\`./execute_gp_script.sh [gnuplot script]\`\`." >> ${README_MD_FILE}
+echo -e "- Please execute scripts as \`\`./[execute_gp_script.sh](../${DIR_SCRIPTS}/execute_gp_script.sh) [gnuplot script]\`\`." >> ${README_MD_FILE}
 echo -e "- The created pdf file will be stored in \`\`../${DIR_OUTPUT_PDF_FILES}\`\`." >> ${README_MD_FILE}
 echo -e "- The figures in the paper were created on Linux (Ubuntu).\n"                 >> ${README_MD_FILE}
 # Correspondence table
-echo "|Figure Number|Data file (in \"${DIR_DATA_FILES}\" directory)|Script (in \"${DIR_SCRIPTS}\" directory)|Output pdf file (will be appear in \"${DIR_OUTPUT_PDF_FILES}\" directory)" >> ${README_MD_FILE}
+echo "|Figure Number|Data file (in \"${DIR_DATA_FILES}\" directory)|Script (in \"${DIR_SCRIPTS}\" directory)|Output pdf file (will be stored in \"${DIR_OUTPUT_PDF_FILES}\" directory)" >> ${README_MD_FILE}
 echo "| ---- | ---- | ---- | ---- |" >> ${README_MD_FILE}
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
 do
