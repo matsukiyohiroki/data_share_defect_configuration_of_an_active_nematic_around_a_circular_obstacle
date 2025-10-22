@@ -28,10 +28,11 @@ rm -f ./${DIR_DATA_FILES}/*
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> ${README_MD_FILE}
 # Notes on how to use scripts
 echo "Notes" >> ${README_MD_FILE}
-echo -e "- Gnuplot must be installed to execute the scripts.\n"                 >> ${README_MD_FILE}
-echo -e "- Execute [execute_gp_script.sh](../${DIR_SCRIPTS}/execute_gp_script.sh) in the \"${DIR_SCRIPTS}\" directory as \`\`./execute_gp_script.sh [gnuplot script]\`\`. The gnuplot scripts are listed in the third column of the table." >> ${README_MD_FILE}
+echo -e "- Gnuplot must be installed to execute the scripts.\n" >> ${README_MD_FILE}
+echo -e "- Execute [execute_gp_script.sh](../${DIR_SCRIPTS}/execute_gp_script.sh) in the \"${DIR_SCRIPTS}\" directory as \`\`./execute_gp_script.sh [gnuplot script]\`\`. The gnuplot scripts are listed in the third column of the table.<br>" >> ${README_MD_FILE}
+echo -e "e.g., \`\`./execute_gp_script.sh scalar_order_parameter_passive_homeotropic.gp\`\`" >> ${README_MD_FILE}
 echo -e "- The created pdf file will be stored in \`\`${DIR_SCRIPTS}/../${DIR_OUTPUT_PDF_FILES}\`\`." >> ${README_MD_FILE}
-echo -e "- The figures in the paper were created on Linux (Ubuntu). We have confirmed that the scripts also work on Mac.\n"                 >> ${README_MD_FILE}
+echo -e "- The figures in the paper were created on Linux (Ubuntu). We have confirmed that the scripts also work on Mac.\n" >> ${README_MD_FILE}
 # Correspondence table
 echo "|Figure Number|Data file (in \"${DIR_DATA_FILES}\" directory)|Script (in \"${DIR_SCRIPTS}\" directory)|Output pdf file (will be stored in \"${DIR_OUTPUT_PDF_FILES}\" directory)" >> ${README_MD_FILE}
 echo "| ---- | ---- | ---- | ---- |" >> ${README_MD_FILE}
