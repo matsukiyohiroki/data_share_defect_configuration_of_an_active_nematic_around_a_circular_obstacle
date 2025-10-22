@@ -24,3 +24,4 @@
 
 Notes
 - Please execute scripts as ``./script.sh output.pdf``
+The figures in the paper were created on Linux (Ubuntu).
