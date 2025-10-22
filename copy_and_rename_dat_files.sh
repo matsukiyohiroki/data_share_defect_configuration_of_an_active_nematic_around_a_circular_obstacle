@@ -19,18 +19,19 @@ done
 README_MD_FILE="readme.md"
 DIR_DATA_FILES="data_files"
 DIR_SCRIPTS="scripts"
+DIR_OUTPUT_PDF_FILES="output_pdf_files"
 : > ${README_MD_FILE}
 rm -f ./${DIR_DATA_FILES}/*
 # title of readme
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> ${README_MD_FILE}
 # Notes on how to use scripts
 echo "Notes" >> ${README_MD_FILE}
-echo -e "- Please execute scripts as \`\`./visualize.sh [gnuplot script]\`\`." >> ${README_MD_FILE}
-echo -e "- The created pdf file will be stored in \`\`../output_pdf_files\`\`." >> ${README_MD_FILE}
-echo -e "- The figures in the paper were created on Linux (Ubuntu).\n"        >> ${README_MD_FILE}
+echo -e "- Please execute scripts as \`\`./execute_gp_script.sh [gnuplot script]\`\`." >> ${README_MD_FILE}
+echo -e "- The created pdf file will be stored in \`\`../${DIR_OUTPUT_PDF_FILES}\`\`." >> ${README_MD_FILE}
+echo -e "- The figures in the paper were created on Linux (Ubuntu).\n"                 >> ${README_MD_FILE}
 # Correspondence table
-echo "|Figure Number|Data file (in \"${DIR_DATA_FILES}\" directory)|Script (in \"${DIR_SCRIPTS}\" directory)|" >> ${README_MD_FILE}
-echo "| ---- | ---- | ---- |" >> ${README_MD_FILE}
+echo "|Figure Number|Data file (in \"${DIR_DATA_FILES}\" directory)|Script (in \"${DIR_SCRIPTS}\" directory)|Output pdf file (will be appear in \"${DIR_OUTPUT_PDF_FILES}\" directory)" >> ${README_MD_FILE}
+echo "| ---- | ---- | ---- | ---- |" >> ${README_MD_FILE}
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
 do
 	for ((j=0; j<${#fig_number_in_paper_converted_to_integer[@]}; j++))
@@ -42,7 +43,7 @@ do
 						### Copy data file and rename
 						# check file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}||" >> ${README_MD_FILE}
 					elif [[ "${short_data_file_name[${j}]}" != *$'\n'* ]]; then
 						### Copy data file and rename
 						# check file existence
@@ -54,7 +55,7 @@ do
 							exit 1
 						fi
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./${DIR_DATA_FILES}/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./${DIR_DATA_FILES}/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}||" >> ${README_MD_FILE}
 					elif [[ "${short_data_file_name[${j}]}" == *$'\n'* ]]; then
 						IFS=$'\n' read -r -d '' -a multiple_dat_files_short_name <<< "${short_data_file_name[${j}]}"
 						IFS=$'\n' read -r -d '' -a multiple_dat_files_full_name  <<< "${full_data_file_name[${j}]}"
@@ -79,7 +80,7 @@ do
 							fi
 						done
 						### Output script name
-						echo "|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|${gnuplot_script_name[${j}]}||" >> ${README_MD_FILE}
 					fi
 				fi
 			fi
