@@ -18,9 +18,10 @@ done
 ### Clean readme.md and data_files/
 : > readme.md
 rm -f ./data_files/*
+# title of readme
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> readme.md
-echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|How to execute gp script|" >> readme.md
-echo "| ---- | ---- | ---- | ---- |" >> readme.md
+echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|" >> readme.md
+echo "| ---- | ---- | ---- |" >> readme.md
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
 do
 	for ((j=0; j<${#fig_number_in_paper_converted_to_integer[@]}; j++))
@@ -32,7 +33,7 @@ do
 						### Copy data file and rename
 						# check file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}||" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [[ "${short_data_file_name[${j}]}" != *$'\n'* ]]; then
 						### Copy data file and rename
 						###   # check file existence
@@ -44,7 +45,7 @@ do
 						###   	exit 1
 						###   fi
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}||" >> readme.md
+						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}|" >> readme.md
 					elif [[ "${short_data_file_name[${j}]}" == *$'\n'* ]]; then
 						IFS=$'\n' read -r -d '' -a multiple_dat_files <<< "${short_data_file_name[${j}]}"
 						echo -n "|${fig_number_in_paper[${j}]}|" >> readme.md
@@ -59,10 +60,13 @@ do
 								echo -n "[${multiple_dat_files[${k}]}](./data_files/${multiple_dat_files[${k}]})<br>" >> readme.md
 							fi
 						done
-						echo "|${gnuplot_script_name[${j}]}||" >> readme.md
+						echo "|${gnuplot_script_name[${j}]}|" >> readme.md
 					fi
 				fi
 			fi
 		fi
 	done
 done
+# Notes on how to use scripts
+echo "Notes" >> readme.md
+echo "- Please execute scripts as follows: ./script.sh output.pdf" >> readme.md
