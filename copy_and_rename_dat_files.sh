@@ -12,6 +12,7 @@ sourced_files+=("./list_gnuplot_script_name.txt")
 sourced_files+=("./list_short_data_file_name.txt")
 sourced_files+=("./list_full_data_file_name.txt")
 sourced_files+=("./list_output_pdf_files_name.txt")
+sourced_files+=("./list_shell_script_name.txt")
 for sourced_file in ${sourced_files[@]}
 do
 	if [ -e ${sourced_file} ]; then source ${sourced_file}; else echo "Can't find ${sourced_file}. Terminate the script."; exit 1;fi
