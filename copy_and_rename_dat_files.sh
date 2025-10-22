@@ -44,7 +44,7 @@ do
 						### Copy data file and rename
 						# check file existence
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|-|[${gnuplot_script_name[${j}]}](./${DIR_SCRIPTS}/${gnuplot_script_name[${j}]})|${output_pdf_file_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|${fig_number_in_paper[${j}]}|-|[${shell_script_name[${j}]}](./${DIR_SCRIPTS}/${shell_script_name[${j}]})<br>[${gnuplot_script_name[${j}]}](./${DIR_SCRIPTS}/${gnuplot_script_name[${j}]})|${output_pdf_file_name[${j}]}|" >> ${README_MD_FILE}
 					elif [[ "${short_data_file_name[${j}]}" != *$'\n'* ]]; then
 						### Copy data file and rename
 						# check file existence
@@ -56,7 +56,7 @@ do
 							exit 1
 						fi
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./${DIR_DATA_FILES}/${short_data_file_name[${j}]})|[${gnuplot_script_name[${j}]}](./${DIR_SCRIPTS}/${gnuplot_script_name[${j}]})|${output_pdf_file_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./${DIR_DATA_FILES}/${short_data_file_name[${j}]})|[${shell_script_name[${j}]}](./${DIR_SCRIPTS}/${shell_script_name[${j}]})<br>[${gnuplot_script_name[${j}]}](./${DIR_SCRIPTS}/${gnuplot_script_name[${j}]})|${output_pdf_file_name[${j}]}|" >> ${README_MD_FILE}
 					elif [[ "${short_data_file_name[${j}]}" == *$'\n'* ]]; then
 						IFS=$'\n' read -r -d '' -a multiple_dat_files_short_name <<< "${short_data_file_name[${j}]}"
 						IFS=$'\n' read -r -d '' -a multiple_dat_files_full_name  <<< "${full_data_file_name[${j}]}"
@@ -81,7 +81,7 @@ do
 							fi
 						done
 						### Output script name
-						echo "|[${gnuplot_script_name[${j}]}](./${DIR_SCRIPTS}/${gnuplot_script_name[${j}]})|${output_pdf_file_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|[${shell_script_name[${j}]}](./${DIR_SCRIPTS}/${shell_script_name[${j}]})<br>[${gnuplot_script_name[${j}]}](./${DIR_SCRIPTS}/${gnuplot_script_name[${j}]})|${output_pdf_file_name[${j}]}|" >> ${README_MD_FILE}
 					fi
 				fi
 			fi
