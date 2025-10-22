@@ -17,8 +17,10 @@ do
 done
 ### Clean readme.md and data_files/
 README_MD_FILE="readme.md"
+DIR_DATA_FILES="data_files"
+DIR_SCRIPTS="scripts"
 : > ${README_MD_FILE}
-rm -f ./data_files/*
+rm -f ./${DIR_DATA_FILES}/*
 # title of readme
 echo "# Correspondence table between figure names, data files and scripts to create figures" >> ${README_MD_FILE}
 # Notes on how to use scripts
@@ -26,7 +28,7 @@ echo "Notes" >> ${README_MD_FILE}
 echo -e "- Please execute scripts as \`\`./script.sh output.pdf\`\`" >> ${README_MD_FILE}
 echo -e "- The figures in the paper were created on Linux (Ubuntu).\n" >> ${README_MD_FILE}
 # Correspondence table
-echo "|Figure Number|Data file (in \"data_files\" directory)|Script (in \"scripts\" directory)|" >> ${README_MD_FILE}
+echo "|Figure Number|Data file (in \"${DIR_DATA_FILES}\" directory)|Script (in \"${DIR_SCRIPTS}\" directory)|" >> ${README_MD_FILE}
 echo "| ---- | ---- | ---- |" >> ${README_MD_FILE}
 for ((i=0; i<${#fig_number_in_paper_converted_to_integer[@]}; i++))
 do
@@ -42,16 +44,16 @@ do
 						echo "|${fig_number_in_paper[${j}]}|-|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
 					elif [[ "${short_data_file_name[${j}]}" != *$'\n'* ]]; then
 						### Copy data file and rename
-						###   # check file existence
-						###   if [ -e ${full_data_file_name[${j}]} ]; then
-						###   	# copy & rename
-						###   	#cp ${full_data_file_name[${j}]} ./data_files/${short_data_file_name[${j}]}
-						###   else
-						###   	echo "Can't find ${full_data_file_name[${j}]}"
-						###   	exit 1
-						###   fi
+				#		# check file existence
+				#		if [ -e ${full_data_file_name[${j}]} ]; then
+				#			# copy & rename
+				#			#cp ${full_data_file_name[${j}]} ./${DIR_DATA_FILES}/${short_data_file_name[${j}]}
+				#		else
+				#			echo "Can't find ${full_data_file_name[${j}]}"
+				#			exit 1
+				#		fi
 						### Output Fig Number, data file name and script name
-						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./data_files/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
+						echo "|${fig_number_in_paper[${j}]}|[${short_data_file_name[${j}]}](./${DIR_DATA_FILES}/${short_data_file_name[${j}]})|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
 					elif [[ "${short_data_file_name[${j}]}" == *$'\n'* ]]; then
 						IFS=$'\n' read -r -d '' -a multiple_dat_files <<< "${short_data_file_name[${j}]}"
 						echo -n "|${fig_number_in_paper[${j}]}|" >> ${README_MD_FILE}
@@ -61,9 +63,9 @@ do
 							# copy & rename
 							### Output Fig Number, data file name and script name
 							if (( k == ${#multiple_dat_files[@]} -1 )); then
-								echo -n "[${multiple_dat_files[${k}]}](./data_files/${multiple_dat_files[${k}]})" >> ${README_MD_FILE}
+								echo -n "[${multiple_dat_files[${k}]}](./${DIR_DATA_FILES}/${multiple_dat_files[${k}]})" >> ${README_MD_FILE}
 							else
-								echo -n "[${multiple_dat_files[${k}]}](./data_files/${multiple_dat_files[${k}]})<br>" >> ${README_MD_FILE}
+								echo -n "[${multiple_dat_files[${k}]}](./${DIR_DATA_FILES}/${multiple_dat_files[${k}]})<br>" >> ${README_MD_FILE}
 							fi
 						done
 						echo "|${gnuplot_script_name[${j}]}|" >> ${README_MD_FILE}
